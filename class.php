@@ -102,7 +102,7 @@ class MyTsel{
     }
     
     public function login($Msisdn, $otp, $tipe) {
-        
+        echo "$tipe";
         $l = 'client_id='.self::clientid.'&connection=sms&grant_type=password&username=%2B';
         $l1 = "$Msisdn&password=$otp";
         $l2 = '&scope=openid%20offline_access&device=string';
@@ -116,7 +116,7 @@ class MyTsel{
             'content-length: 161',
             'User-Agent: Mozilla/5.0 (Linux; U; Android 4.4; xx-xx; SM-J110F Build/KTU84P) AppleWebKit/537.16 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.16 Chrome/33.0.0.0'
         );
-        curl_setopt($ch, CURLOPT_URL, "https://$tipe/oauth/ro');
+        curl_setopt($ch, CURLOPT_URL, "https://$tipe/oauth/ro");
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
@@ -132,6 +132,7 @@ class MyTsel{
             //     echo "Jangan kelamaan masukin otp anjeng juga otp jangan salah";
             // }
         $json = json_decode( $hasil );
+        echo "$hasil";
         #echo $out."<br><br>";
 
         switch(true){
@@ -234,7 +235,7 @@ class MyTsel{
                 $mc = MultiCurl::getInstance();
     
                 // Set up your cURL handle(s).
-                $ch = curl_init("https://".$tipe."/api/user/");
+                $ch = curl_init("https://$tipe/api/user/");
                 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PATCH");
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $payload3);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -287,7 +288,7 @@ class MyTsel{
         $mc = MultiCurl::getInstance();
     
         // Set up your cURL handle(s).
-        $ch = curl_init("https://".$tipe."/api/user/logout");
+        $ch = curl_init("https://$tipe/api/user/logout");
               curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
               curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
               curl_setopt($ch, CURLOPT_POSTFIELDS, $payload3);
@@ -315,7 +316,7 @@ class MyTsel{
         $mc = MultiCurl::getInstance();
     
         // Set up your cURL handle(s).
-        $ch = curl_init("https://".$tipe."/api/packages/".$pkgid);
+        $ch = curl_init("https://$tipe/api/packages/".$pkgid);
               curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
               curl_setopt($ch, CURLOPT_POSTFIELDS, '{"toBeSubscribedTo":false}');
               curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
