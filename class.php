@@ -101,8 +101,8 @@ class MyTsel{
             return NULL;
     }
     
-    public function login($Msisdn, $otp, $tipe) {
-        echo "$tipe";
+    public function login($Msisdn, $otp) {
+ 
         $l = 'client_id='.self::clientid.'&connection=sms&grant_type=password&username=%2B';
         $l1 = "$Msisdn&password=$otp";
         $l2 = '&scope=openid%20offline_access&device=string';
@@ -116,7 +116,7 @@ class MyTsel{
             'content-length: 161',
             'User-Agent: Mozilla/5.0 (Linux; U; Android 4.4; xx-xx; SM-J110F Build/KTU84P) AppleWebKit/537.16 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.16 Chrome/33.0.0.0'
         );
-        curl_setopt($ch, CURLOPT_URL, "https://$tipe/oauth/ro");
+        curl_setopt($ch, CURLOPT_URL, "https://tdwidm.telkomsel.com/oauth/ro");
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
