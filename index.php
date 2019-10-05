@@ -141,12 +141,11 @@ KEY:&nbsp;&nbsp;&nbsp;<input type="text" name="key"></input>
 </body>
 
 <!-- ################################ 2 ################################ -->
-<?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token'])){ ?>
+<?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['tipe']) and !isset($_SESSION['secret_token'])){ ?>
 <body>
     <form method="POST">
     <pre>
-CHANNEL:<input type="radio" name="tipe" value="vmp.telkomsel.com"> VMP&nbsp;&nbsp;
-<input type="radio" name="tipe" value="vmp-preprod.telkomsel.com"> VMP Prepod<br>
+CHANNEL:<input type="radio" name="tipe" value="vmp.telkomsel.com" checked> VMP&nbsp;&nbsp;<input type="radio" name="tipe" value="vmp-preprod.telkomsel.com"> VMP Prepod<br>
 MSISDN: <?= $_SESSION['msisdn']; ?> <input type="submit" name="do" value="CHANGE"></input>
 ENTEROTP:<input type="number" name="otp"></input>
 <input type="submit" name="do" value="LOGIN"></input>
@@ -157,7 +156,7 @@ ENTEROTP:<input type="number" name="otp"></input>
 
 
 <!-- ################################ 3 ################################ -->
-<?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and isset($_SESSION['otp']) and isset($_SESSION['secret_token'])){ ?>
+<?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and isset($_SESSION['otp']) and isset($_SESSION['tipe']) and isset($_SESSION['secret_token'])){ ?>
 <body>
 <form method="POST">
 <fieldset>
