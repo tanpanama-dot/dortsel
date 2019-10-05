@@ -7,7 +7,6 @@ session_start(); #list: key, msisdn, otp, secret_token
     <title>Team Pencari Proxy © 2019</title>
     <link rel="shortcut icon" href="https://resources.1337route.cf/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="https://colorlib.com/etc/lf/Login_v6/images/icons/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/vendor/bootstrap/css/bootstrap.min.css">
@@ -146,16 +145,13 @@ session_start(); #list: key, msisdn, otp, secret_token
 <span class="login100-form-title p-b-70">
 Dor Tsel
 </span>
-<span class="login100-form-avatar">
-    <img src="images/avatar-01.jpg" alt="AVATAR">
-</span>
 <!-- ################################ 1 ################################ -->
 <?php if (!isset($_SESSION['key']) and !isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
     <form method="POST">
     <pre>
 <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="628xx">
-<input class="input100" type="text" name="msisdn">
+<input class="input100" type="number" name="msisdn">
 <span class="focus-input100" data-placeholder="Nomer Hp 628x"></span>
 </div>
 <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
@@ -211,6 +207,9 @@ TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value=
 <hr>
 </fieldset>
 </form>
+</div>
+</div>
+</div>
 <div id="dropDownSelect1"></div>
 <script src="https://colorlib.com/etc/lf/Login_v6/vendor/jquery/jquery-3.2.1.min.js" type="d67ae5498385167272e393dc-text/javascript"></script>
 <script src="https://colorlib.com/etc/lf/Login_v6/vendor/animsition/js/animsition.min.js" type="d67ae5498385167272e393dc-text/javascript"></script>
