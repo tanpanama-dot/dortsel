@@ -101,7 +101,7 @@ class MyTsel{
             return NULL;
     }
     
-    public function login($Msisdn, $otp) {
+    public function login($Msisdn, $otp, $tipe) {
  
         $l = 'client_id='.self::clientid.'&connection=sms&grant_type=password&username=%2B';
         $l1 = "$Msisdn&password=$otp";
@@ -188,7 +188,7 @@ class MyTsel{
                 /*
                 $ch3 = curl_init();
                 curl_setopt_array($ch3, array(
-                    CURLOPT_URL => "https://tdw.telkomsel.com/api/user/",
+                    CURLOPT_URL => "https://$tipe/api/user/",
                     CURLOPT_HEADER => 1,
                     CURLOPT_CUSTOMREQUEST => "PATCH",
                     CURLOPT_POSTFIELDS => $payload3,
