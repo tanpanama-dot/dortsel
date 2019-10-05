@@ -93,7 +93,7 @@ session_start(); #list: key, msisdn, otp, secret_token
                 
                 
                 if (strlen($login) > 0){
-                    echo "asw";
+
                     $secret_token               = trim(preg_replace('/\s+/', ' ', $login));
                     $_SESSION['otp']            = $otp;
                     $_SESSION['secret_token']   = $secret_token;
