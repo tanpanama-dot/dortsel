@@ -211,5 +211,24 @@ TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value=
 <hr>
 </fieldset>
 </form>
+<div id="dropDownSelect1"></div>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/jquery/jquery-3.2.1.min.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/animsition/js/animsition.min.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/bootstrap/js/popper.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/bootstrap/js/bootstrap.min.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/select2/select2.min.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/daterangepicker/moment.min.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/daterangepicker/daterangepicker.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/vendor/countdowntime/countdowntime.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script src="https://colorlib.com/etc/lf/Login_v6/js/main.js" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="d67ae5498385167272e393dc-text/javascript"></script>
+<script type="d67ae5498385167272e393dc-text/javascript">
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="d67ae5498385167272e393dc-|49" defer=""></script></body>
 </body>
 <?php } ?>
