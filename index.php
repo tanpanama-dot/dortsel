@@ -144,7 +144,7 @@ session_start(); #list: key, msisdn, otp, secret_token
 <div class="wrap-login100 p-t-85 p-b-20">
 <form class="login100-form validate-form">
 <span class="login100-form-title p-b-70">
-Dor Tsel V2 Team Pencari Proxy © 2019
+Dor Tsel
 </span>
 <span class="login100-form-avatar">
     <img src="images/avatar-01.jpg" alt="AVATAR">
