@@ -26,6 +26,7 @@ session_start(); #list: key, msisdn, otp, secret_token
             case "CHANGE":{
                 $key    = $_SESSION['key'];
                 $msisdn = $_SESSION['msisdn'];
+                $tipe   = $_SESSION['tipe'];
                 
                 unset($_SESSION['key']);
                 unset($_SESSION['tipe']);
@@ -83,7 +84,7 @@ session_start(); #list: key, msisdn, otp, secret_token
             case "LOGIN":{
                 $key    = $_SESSION['key'];
                 $msisdn = $_SESSION['msisdn'];
-                $tipe   = $_SESSION['tipe'];
+                $tipe   = $_POST['tipe'];
                 $otp    = $_POST['otp'];
                 
                 //if ($key != privatekey){die("Error: wrong key");}
@@ -92,7 +93,7 @@ session_start(); #list: key, msisdn, otp, secret_token
                 
                 
                 if (strlen($login) > 0){
-                    
+                    echo "asw";
                     $secret_token               = trim(preg_replace('/\s+/', ' ', $login));
                     $_SESSION['otp']            = $otp;
                     $_SESSION['secret_token']   = $secret_token;
@@ -140,14 +141,12 @@ KEY:&nbsp;&nbsp;&nbsp;<input type="text" name="key"></input>
 </body>
 
 <!-- ################################ 2 ################################ -->
-<?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
+<?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token'])){ ?>
 <body>
     <form method="POST">
     <pre>
-<form action="">
-CHANNEL:  <input type="radio" name="tipe" value="vmp.telkomsel.com"> VMP
-  <input type="radio" name="tipe" value="vmp-preprod.telkomsel.com"> Female<br>
-</form><br>
+CHANNEL:<input type="radio" name="tipe" value="vmp.telkomsel.com"> VMP&nbsp;&nbsp;
+<input type="radio" name="tipe" value="vmp-preprod.telkomsel.com"> VMP Prepod<br>
 MSISDN: <?= $_SESSION['msisdn']; ?> <input type="submit" name="do" value="CHANGE"></input>
 ENTEROTP:<input type="number" name="otp"></input>
 <input type="submit" name="do" value="LOGIN"></input>
@@ -169,9 +168,9 @@ OTP:&nbsp;<?= $_SESSION['otp']."<br>" ?>
 <hr>
 <h3><u>Buy Package</u></h3>
 PKGID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pkgid" style="width: 50%;"></input><br>
-PILIH&nbsp;PAKET: <select name="pkgid" style="width: 50%;">
-  <option value="00009382">Maxstream 1GB 2hari Rp 10</option>
-  <option value="00007333">Maxtream 30gb 30k</option>
+PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="pkgid" style="width: 50%;">
+  <option value="00009382">OMG! 1GB 2hari Rp 10</option>
+  <option value="00007333">OMG! 30gb 30k</option>
 </select><br>
 TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value="A301180826192021277131740"></input><br>
 <input type="submit" name="do" value="BUY_PKG"></input><br><br>
