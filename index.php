@@ -7,18 +7,6 @@ session_start(); #list: key, msisdn, otp, secret_token
     <title>Team Pencari Proxy © 2019</title>
     <link rel="shortcut icon" href="https://resources.1337route.cf/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="https://colorlib.com/etc/lf/Login_v6/images/icons/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/fonts/iconic/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/vendor/css-hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/vendor/animsition/css/animsition.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/vendor/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/css/util.css">
-    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v6/css/main.css">
 </head>
 <?php
     date_default_timezone_set('Asia/Jakarta');
@@ -138,34 +126,16 @@ session_start(); #list: key, msisdn, otp, secret_token
         
     }
 ?>
-<div class="limiter">
-<div class="container-login100">
-<div class="wrap-login100 p-t-85 p-b-20">
-<form class="login100-form validate-form">
-<span class="login100-form-title p-b-70">
-Dor Tsel
+<h3>Dor Tsel V2 Team Pencari Proxy 2019</h3>
 </span>
 <!-- ################################ 1 ################################ -->
 <?php if (!isset($_SESSION['key']) and !isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
     <form method="POST">
     <pre>
-<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="628xx">
-<input class="input100" type="number" name="msisdn">
-<span class="focus-input100" data-placeholder="Nomer Hp 628x"></span>
-</div>
-<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-<input class="input100" type="text" name="key">
-<span class="focus-input100" data-placeholder="Password :v"></span>
-</div>
-<div class="container-login100-form-btn">
-<input type="submit" class="login100-form-btn" name="do" value="GETOTP"></input>
-</div>
-
-<!-- 
 MSISDN:<input type="number" name="msisdn" placeholder="628xxx"></input>
 KEY:&nbsp;&nbsp;&nbsp;<input type="text" name="key"></input>
-<input type="submit" name="do" value="GETOTP"></input> -->
+<input type="submit" name="do" value="GETOTP"></input>
 <?php if(!empty($err)) echo $err ?>
     </pre>
     </form>	    
