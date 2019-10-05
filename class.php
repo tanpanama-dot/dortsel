@@ -132,7 +132,6 @@ class MyTsel{
             //     echo "Jangan kelamaan masukin otp anjeng juga otp jangan salah";
             // }
         $json = json_decode( $hasil );
-        echo "$hasil";
         #echo $out."<br><br>";
 
         switch(true){
