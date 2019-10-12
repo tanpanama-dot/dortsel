@@ -7,15 +7,15 @@ session_start(); #list: key, msisdn, otp, secret_token
     <title>Team Pencari Proxy © 2019</title>
     <link rel="shortcut icon" href="https://resources.1337route.cf/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8">
-    <link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
-    <link href="https://colorlib.com/etc/regform/colorlib-regform-4/css/main.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/css/util.css">
+    <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/cf/ContactFrom_v10/css/main.css">
 </head>
 <?php
     date_default_timezone_set('Asia/Jakarta');
@@ -148,72 +148,42 @@ session_start(); #list: key, msisdn, otp, secret_token
 <!-- ################################ 1 ################################ -->
 <?php if (!isset($_SESSION['key']) and !isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
-<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-<div class="wrapper wrapper--w680">
-<div class="card card-4">
-<div class="card-body">
-<h2 class="title">Dor Tsel V2 Team Pencari Proxy 2019</h2>
-    <form method="POST">
-    <pre>
-<div class="row row-space">
-<div class="col-2">
-<div class="input-group">
-<label class="label">Nomer Hp</label>
-<input type="number" class="input--style-4" name="msisdn" placeholder="628xxx">
+<div class="container-contact100">
+<div class="wrap-contact100">
+<form class="contact100-form validate-form" method="POST">
+<span class="contact100-form-title">
+Dor Tsel TPP
+</span>
+<!--     <form method="POST">
+    <pre> -->
+<div class="wrap-input100 validate-input" data-validate="Please enter your msisdn">
+<input class="input100" type="text" name="msisdn" placeholder="Nomer Hp 628x">
+<span class="focus-input100"></span>
 </div>
+<div class="wrap-input100 validate-input" data-validate="Please enter your key">
+<input class="input100" type="text" name="key" placeholder="Key">
+<span class="focus-input100"></span>
 </div>
-<div class="col-2">
-<div class="input-group">
-<label class="label">Key</label>
-<input type="text" class="input--style-4" name="key">
-</div>
-</div>
-</div>
-<div class="p-t-15">
-<input class="btn btn--radius-2 btn--blue" name="do" value="GETOTP" type="submit"></input>
+<div class="container-contact100-form-btn">
+<input class="contact100-form-btn" name="do" value="GETOTP" type="submit"></input>
 </div>
 <!-- <input type="submit" name="do" value="GETOTP"></input> -->
 <?php if(!empty($err)) echo $err ?> 
-    </pre>
+<!--     </pre> -->
 </form>
 </div>
 </div>
-</div>
-</div>
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/jquery/jquery.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/select2/select2.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/moment.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/daterangepicker.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/js/global.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-<script type="9ece4f9225c52590d5b1d255-text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="9ece4f9225c52590d5b1d255-|49" defer=""></script>
 </body>
 
 <!-- ################################ 2 ################################ -->
 <?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['tipe']) and !isset($_SESSION['secret_token'])){ ?>
 <body>
-<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-<div class="wrapper wrapper--w680">
-<div class="card card-4">
-<div class="card-body">
-<h2 class="title">Dor Tsel V2 Team Pencari Proxy 2019</h2>
-    <form method="POST">
-    <pre>
-<div class="row row-space">
-<div class="col-2">
-<div class="input-group">
-<label class="label">Channel</label>
-<div class="p-t-10">
+<div class="container-contact100">
+<div class="wrap-contact100">
+<form class="contact100-form validate-form" method="POST">
+<span class="contact100-form-title">
+Dor Tsel TPP
+</span>
 <label class="radio-container m-r-45">VMP
 <input type="radio" checked="checked" name="tipe" value="vmp.telkomsel.com">
 <span class="checkmark"></span>
@@ -222,54 +192,27 @@ session_start(); #list: key, msisdn, otp, secret_token
 <input type="radio" name="tipe" value="vmp-preprod.telkomsel.com">
 <span class="checkmark"></span>
 </label>
-</div>
-</div>
 <!-- <input type="radio" name="tipe" value="vmp.telkomsel.com" checked> VMP&nbsp;&nbsp;<input type="radio" name="tipe" value="vmp-preprod.telkomsel.com"> VMP Prepod<br> -->
-<div class="col-2">
-<div class="input-group">
-<label class="label">Msisdn</label>
-<input type="text" class="input--style-4" value="<?= $_SESSION['msisdn']; ?>" name="phone">
+<div class="wrap-input100 validate-input" data-validate="Please enter your key">
+<input class="input100" type="text" value="<?= $_SESSION['msisdn']; ?>" name="phone">
+<span class="focus-input100"></span>
 </div>
+<div class="container-contact100-form-btn">
+<input class="contact100-form-btn" name="do" value="CHANGE" type="submit"></input>
 </div>
+<div class="wrap-input100 validate-input" data-validate="Please enter your key">
+<input class="input100" type="number" name="otp">
+<span class="focus-input100"></span>
 </div>
-<div class="p-t-15">
-<input class="btn btn--radius-2 btn--blue" name="do" value="CHANGE" type="submit"></input>
-</div>
-<div class="input-group">
-<!--   <input type="submit" name="do" value="CHANGE"></input> -->
-<label class="label">Enter Otp</label>
-<input type="number" class="input--style-4" name="otp">
-</div>
-</div>
-<div class="p-t-15">
-<input class="btn btn--radius-2 btn--blue" name="do" value="LOGIN" type="submit"></input>
+<div class="container-contact100-form-btn">
+<input class="contact100-form-btn" name="do" value="LOGIN" type="submit"></input>
 </div>
 <!-- <input type="submit" name="do" value="LOGIN"></input> -->
 <?php if(!empty($err)) echo $err ?>
-    </pre>
+<!--     </pre> -->
     </form>
 </div>
 </div>
-</div>
-</div>
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/jquery/jquery.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/select2/select2.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/moment.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/daterangepicker.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-
-<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/js/global.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
-<script type="9ece4f9225c52590d5b1d255-text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="9ece4f9225c52590d5b1d255-|49" defer=""></script>
-
 </body>
 
 
