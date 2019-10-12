@@ -165,7 +165,7 @@ Dor Tsel TPP
 <span class="focus-input100"></span>
 </div>
 <div class="container-contact100-form-btn">
-<input class="contact100-form-btn" name="do" value="GETOTP" type="submit"></input>
+<button class="contact100-form-btn" name="do" value="GETOTP" type="submit"></button>
 </div>
 <!-- <input type="submit" name="do" value="GETOTP"></input> -->
 <?php if(!empty($err)) echo $err ?> 
@@ -198,14 +198,14 @@ Dor Tsel TPP
 <span class="focus-input100"></span>
 </div>
 <div class="container-contact100-form-btn">
-<input class="contact100-form-btn" name="do" value="CHANGE" type="submit"></input>
+<button class="contact100-form-btn" name="do" value="CHANGE" type="submit"></button>
 </div>
 <div class="wrap-input100 validate-input" data-validate="Please enter your key">
 <input class="input100" type="number" name="otp">
 <span class="focus-input100"></span>
 </div>
 <div class="container-contact100-form-btn">
-<input class="contact100-form-btn" name="do" value="LOGIN" type="submit"></input>
+<button class="contact100-form-btn" name="do" value="LOGIN" type="submit"></button>
 </div>
 <!-- <input type="submit" name="do" value="LOGIN"></input> -->
 <?php if(!empty($err)) echo $err ?>
