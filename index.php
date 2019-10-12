@@ -169,7 +169,7 @@ session_start(); #list: key, msisdn, otp, secret_token
 </div>
 </div>
 <div class="p-t-15">
-<input class="btn btn--radius-2 btn--blue" name="do" value="GETOTP" type="submit">Get Otp</input>
+<input class="btn btn--radius-2 btn--blue" name="do" value="GETOTP" type="submit"></input>
 </div>
 <!-- <input type="submit" name="do" value="GETOTP"></input> -->
 <?php if(!empty($err)) echo $err ?> 
@@ -215,7 +215,7 @@ session_start(); #list: key, msisdn, otp, secret_token
 </div>
 </div>
 <div class="p-t-15">
-<input class="btn btn--radius-2 btn--blue" name="do" value="CHANGE" type="submit">Change</input>
+<input class="btn btn--radius-2 btn--blue" name="do" value="CHANGE" type="submit"></input>
 </div>
 <div class="input-group">
 <!--   <input type="submit" name="do" value="CHANGE"></input> -->
@@ -224,7 +224,7 @@ session_start(); #list: key, msisdn, otp, secret_token
 </div>
 </div>
 <div class="p-t-15">
-<input class="btn btn--radius-2 btn--blue" name="do" value="LOGIN" type="submit">Login</input>
+<input class="btn btn--radius-2 btn--blue" name="do" value="LOGIN" type="submit"></input>
 </div>
 <!-- <input type="submit" name="do" value="LOGIN"></input> -->
 <?php if(!empty($err)) echo $err ?>
