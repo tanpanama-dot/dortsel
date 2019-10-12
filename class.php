@@ -290,7 +290,7 @@ class MyTsel{
         $ch = curl_init("https://$tipe/api/user/logout");
               curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
               curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-              curl_setopt($ch, CURLOPT_POSTFIELDS, $payload3);
+              curl_setopt($ch, CURLOPT_POSTFIELDS, $payload4);
               curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 "Content-Length: ".strlen($payload4)."",
                 "Authorization: Bearer ".$Bearer."",
