@@ -116,9 +116,18 @@ session_start(); #list: key, msisdn, otp, secret_token
                 $secret_token   = $_SESSION['secret_token'];
                 $pkgid          = $_POST['pkgid'];
                 $transactionid  = $_POST['transactionid'];
-
-                $tsel = new MyTsel();
-                $ress = "PKGID: <b>".$pkgid."</b><br>Result: ".$tsel->buy_pkg($secret_token, $pkgid, $transactionid, $tipe);
+                
+                switch($_POST['pkgid']){
+                case '1':
+                    $pkgidman = $_POST['pkgidman'];
+                    $tsel = new MyTsel();
+                    $ress = "PKGID: <b>".$pkgidman."</b><br>Result: ".$tsel->buy_pkg($secret_token, $pkgidman, $transactionid, $tipe);
+                break;
+                default:
+                    $tsel = new MyTsel();
+                    $ress = "PKGID: <b>".$pkgid."</b><br>Result: ".$tsel->buy_pkg($secret_token, $pkgid, $transactionid, $tipe);
+                }
+                
             }
             break;
             
@@ -170,11 +179,12 @@ OTP:&nbsp;<?= $_SESSION['otp']."<br>" ?>
 <input type="submit" name="do" value="LOGOUT"></input>
 <hr>
 <h3><u>Buy Package</u></h3>
-PKGID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pkgid" style="width: 50%;"></input><br>
-PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="pkgid" style="width: 50%;">
+PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="pkgid" onchange="if (this.value=='1'){this.form['pkgidman'].style.visibility='visible'}else {this.form['pkgidman'].style.visibility='hidden'};" style="width: 50%;">
   <option value="00009382">OMG! 1GB 2hari Rp 10</option>
   <option value="00007333">OMG! 30gb 30k</option>
+  <option value="1">Manual ID</option>
 </select><br>
+PKGID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pkgidman"  style="width: 50%; visibility:hidden;"></input><br>
 TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value="A301180826192021277131740"></input><br>
 <input type="submit" name="do" value="BUY_PKG"></input><br><br>
 <?php if(!empty($ress)) echo $ress ?>
