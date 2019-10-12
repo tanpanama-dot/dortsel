@@ -179,6 +179,23 @@ session_start(); #list: key, msisdn, otp, secret_token
 </div>
 </div>
 </div>
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/jquery/jquery.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/select2/select2.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/moment.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/daterangepicker.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/js/global.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+<script type="9ece4f9225c52590d5b1d255-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="9ece4f9225c52590d5b1d255-|49" defer=""></script>
 </body>
 
 <!-- ################################ 2 ################################ -->
@@ -234,6 +251,24 @@ session_start(); #list: key, msisdn, otp, secret_token
 </div>
 </div>
 </div>
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/jquery/jquery.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/select2/select2.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/moment.min.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/vendor/datepicker/daterangepicker.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+
+<script src="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/js/global.js" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="9ece4f9225c52590d5b1d255-text/javascript"></script>
+<script type="9ece4f9225c52590d5b1d255-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="9ece4f9225c52590d5b1d255-|49" defer=""></script>
+
 </body>
 
 
