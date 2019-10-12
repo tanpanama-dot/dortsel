@@ -135,19 +135,47 @@ session_start(); #list: key, msisdn, otp, secret_token
         
     }
 ?>
-<h3>Dor Tsel V2 Team Pencari Proxy 2019</h3>
-</span>
+<link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+<link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+<link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+<link href="https://colorlib.com/etc/regform/colorlib-regform-4/css/main.css" rel="stylesheet" media="all">
 <!-- ################################ 1 ################################ -->
 <?php if (!isset($_SESSION['key']) and !isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['secret_token']) ){ ?>
 <body>
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+<div class="wrapper wrapper--w680">
+<div class="card card-4">
+<div class="card-body">
+<h2 class="title">Dor Tsel V2 Team Pencari Proxy 2019</h2>
     <form method="POST">
     <pre>
-MSISDN:<input type="number" name="msisdn" placeholder="628xxx"></input>
-KEY:&nbsp;&nbsp;&nbsp;<input type="text" name="key"></input>
-<input type="submit" name="do" value="GETOTP"></input>
-<?php if(!empty($err)) echo $err ?>
+<div class="row row-space">
+<div class="col-2">
+<div class="input-group">
+<label class="label">Nomer Hp</label>
+<input type="number" class="input--style-4" name="msisdn" placeholder="628xxx">
+</div>
+</div>
+<div class="col-2">
+<div class="input-group">
+<label class="label">Key</label>
+<input type="text" class="input--style-4" name="key">
+</div>
+</div>
+</div>
+<div class="p-t-15">
+<input class="btn btn--radius-2 btn--blue" name="do" value="GETOTP" type="submit">Get Otp</input>
+</div>
+<!-- <input type="submit" name="do" value="GETOTP"></input> -->
+<?php if(!empty($err)) echo $err ?> 
     </pre>
-    </form>	    
+</form>
+</div>
 </div>
 </div>
 </div>
@@ -156,15 +184,56 @@ KEY:&nbsp;&nbsp;&nbsp;<input type="text" name="key"></input>
 <!-- ################################ 2 ################################ -->
 <?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and !isset($_SESSION['otp']) and !isset($_SESSION['tipe']) and !isset($_SESSION['secret_token'])){ ?>
 <body>
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+<div class="wrapper wrapper--w680">
+<div class="card card-4">
+<div class="card-body">
+<h2 class="title">Dor Tsel V2 Team Pencari Proxy 2019</h2>
     <form method="POST">
     <pre>
-CHANNEL:<input type="radio" name="tipe" value="vmp.telkomsel.com" checked> VMP&nbsp;&nbsp;<input type="radio" name="tipe" value="vmp-preprod.telkomsel.com"> VMP Prepod<br>
-MSISDN: <?= $_SESSION['msisdn']; ?> <input type="submit" name="do" value="CHANGE"></input>
-ENTEROTP:<input type="number" name="otp"></input>
-<input type="submit" name="do" value="LOGIN"></input>
+<div class="row row-space">
+<div class="col-2">
+<div class="input-group">
+<label class="label">Channel</label>
+<div class="p-t-10">
+<label class="radio-container m-r-45">VMP
+<input type="radio" checked="checked" name="tipe" value="vmp.telkomsel.com">
+<span class="checkmark"></span>
+</label>
+<label class="radio-container">VMP Prepod
+<input type="radio" name="tipe" value="vmp-preprod.telkomsel.com">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<!-- <input type="radio" name="tipe" value="vmp.telkomsel.com" checked> VMP&nbsp;&nbsp;<input type="radio" name="tipe" value="vmp-preprod.telkomsel.com"> VMP Prepod<br> -->
+<div class="col-2">
+<div class="input-group">
+<label class="label">Msisdn</label>
+<input type="text" class="input--style-4" value="<?= $_SESSION['msisdn']; ?>" name="phone">
+</div>
+</div>
+</div>
+<div class="p-t-15">
+<input class="btn btn--radius-2 btn--blue" name="do" value="CHANGE" type="submit">Change</input>
+</div>
+<div class="input-group">
+<!--   <input type="submit" name="do" value="CHANGE"></input> -->
+<label class="label">Enter Otp</label>
+<input type="number" class="input--style-4" name="otp">
+</div>
+</div>
+<div class="p-t-15">
+<input class="btn btn--radius-2 btn--blue" name="do" value="LOGIN" type="submit">Login</input>
+</div>
+<!-- <input type="submit" name="do" value="LOGIN"></input> -->
 <?php if(!empty($err)) echo $err ?>
     </pre>
     </form>
+</div>
+</div>
+</div>
+</div>
 </body>
 
 
