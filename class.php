@@ -56,7 +56,7 @@ class MyTsel{
         // curl_close($ch0);
         
         
-        $bahan = 'client_id=9yUwRUZirC0DXZyjMeQF4zCr6KO2R0Ub&connection=sms&phone_number=%2B';
+        $bahan = 'connection=sms&phone_number=%2B';
         $body = "$bahan$Msisdn";
         $header = array(
             'Accept: application/json', 
