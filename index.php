@@ -229,24 +229,58 @@ Login
 <!-- ################################ 3 ################################ -->
 <?php }else if (isset($_SESSION['key']) and isset($_SESSION['msisdn']) and isset($_SESSION['otp']) and isset($_SESSION['tipe']) and isset($_SESSION['secret_token'])){ ?>
 <body>
+<div class="container-contact100">
+<div class="wrap-contact100">
+<form class="contact100-form validate-form" method="POST">
+<span class="contact100-form-title">
+Dor Tsel TPP
+</span>
 <form method="POST">
 <fieldset>
-Key:&nbsp;<?= $_SESSION['key']."<br>" ?>
-Msisdn:&nbsp;<?= $_SESSION['msisdn']."<br>" ?>
-OTP:&nbsp;<?= $_SESSION['otp']."<br>" ?>
-<input type="submit" name="do" value="LOGOUT"></input>
-<hr>
-<h3><u>Buy Package</u></h3>
-PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="pkgid" onchange="if (this.value=='1'){this.form['pkgidman'].style.visibility='visible'}else {this.form['pkgidman'].style.visibility='hidden'};" style="width: 50%;">
+<div class="wrap-input100 validate-input" data-validate="Please enter your phone">
+<input class="input100" type="text" value="<?= $_SESSION['msisdn']; ?>" name="phone" disabled>
+<span class="focus-input100"></span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Please enter your otp">
+<input class="input100" type="text" value="<?= $_SESSION['otp']; ?>" name="otepay" disabled>
+<span class="focus-input100"></span>
+</div>
+<!-- <input type="submit" name="do" value="LOGOUT"></input>
+<hr> -->
+<!-- <h3><u>Buy Package</u></h3> -->
+<!-- PILIH&nbsp;PAKET:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+<select name="pkgid" onchange="if (this.value=='1'){this.form['pkgidman'].style.visibility='visible'}else {this.form['pkgidman'].style.visibility='hidden'};" style="width: 50%;">
   <option value="00009382">OMG! 1GB 2hari Rp 10</option>
   <option value="00016038">OMG! 5gb 10k</option>
 </select><br>
-PKGID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pkgidman"  style="width: 50%; visibility:hidden;"></input><br>
-TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value="A301180826192021277131740"></input><br>
-<input type="submit" name="do" value="BUY_PKG"></input><br><br>
+<div class="wrap-input100 validate-input" data-validate="Please enter your pkgid">
+<input class="input100" type="text" value="" name="pkgidman" style="width: 50%; visibility:hidden;">
+<span class="focus-input100"></span>
+</div>
+
+    PKGID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pkgidman"  style="width: 50%; visibility:hidden;"></input><br>
+<!-- TRANSACTIONID:<input type="text" name="transactionid" style="width: 50%;" value="A301180826192021277131740"></input><br> -->
+<div class="wrap-input100 validate-input" data-validate="Please enter your transactionid">
+<input class="input100" type="text" value="A301180826192021277131740" name="transactionid">
+<span class="focus-input100"></span>
+</div>
+    <div class="container-contact100-form-btn">
+<button class="contact100-form-btn" name="do" value="LOGOUT" type="submit">
+    <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+Logout
+</span></button>&nbsp;&nbsp;
+    <button class="contact100-form-btn" name="do" value="BUY_PKG" type="submit">
+    <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+Beli
+</span></button>
+</div>
+
+<!--     <input type="submit" name="do" value="BUY_PKG"></input><br><br> -->
 <?php if(!empty($ress)) echo $ress ?>
 <hr>
 </fieldset>
 </form>
+</div>
+</div>
 </body>
 <?php } ?>
