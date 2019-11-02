@@ -75,7 +75,8 @@ class MyTsel{
         curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch1, CURLOPT_POSTFIELDS, $body);
         $out = curl_exec($ch1);
-
+	
+	    echo "$out";
         $ip = file_get_contents('https://api.ipify.org');
         $ch2 = curl_init();
         $header1 = array(
